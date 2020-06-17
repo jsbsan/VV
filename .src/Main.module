@@ -16,7 +16,6 @@ Public Sub Main()
 
     Endif
 
-    'Shell "wmctrl -v -i -r " & listaVentanas[0] & " -e '640,1285,0,794,873'"
     Shell "wmctrl -v -i -r " & listaVentanas[0] & " -e '0,0,0,794,840'"
     Shell "wmctrl -i -a " & listaVentanas[0]
     '
