@@ -1,0 +1,31 @@
+' Gambas module file
+
+Public Sub Main()
+
+    Dim listaVentanas As String[]
+    Dim codigo As String
+
+    ' detecto ventanas con Coogle chrome
+    Shell "wmctrl -l | grep \"Google Chrome\" | awk '{print  $1}'" To codigo
+
+    listaVentanas = Split(codigo, "\n")
+    If listaVentanas.count > 2 Then
+        listaVentanas.Pop() 'quito ultima linea
+    Else
+        Return
+
+    Endif
+
+    'Shell "wmctrl -v -i -r " & listaVentanas[0] & " -e '640,1285,0,794,873'"
+    Shell "wmctrl -v -i -r " & listaVentanas[0] & " -e '0,0,0,794,840'"
+    Shell "wmctrl -i -a " & listaVentanas[0]
+    '
+    Shell "wmctrl -v -i -r " & listaVentanas[1] & " -e '0,800,0,794,840'"
+    Shell "wmctrl -i -a " & listaVentanas[1]
+
+    'notas:
+    ''fuente: ''https://www.enmimaquinafunciona.com/pregunta/51638/como-utilizo-wmctrl-y-linea-de-comandos-para-hacer-una-ventana-mas-grande-que-la-pantalla-para-obtener-una-captura-de-pantalla-enorme
+End
+
+'' 0 806 48 794 840
+'' 0 6 48 794 840

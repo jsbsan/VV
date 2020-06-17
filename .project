@@ -1,0 +1,21 @@
+# Gambas Project File 3.0
+Title=VentanasVerticalesChrome
+Startup=Main
+Icon=icono.png
+Version=0.0.2
+Component=gb.image
+Component=gb.qt4
+Description="Pone vertical dos ventanas de chrome en el segundo monitor"
+Authors="jsbsan"
+TabSize=4
+Language=en_US
+Maintainer=mint
+Address=mint@mint-SSD
+License=General Public License
+PackageName=vv-0.0.1
+CreateEachDirectory=1
+Packager=1
+Systems=debian
+Menus=debian:"Applications/Graphics"
+Categories=debian:"Graphics"
+Groups=debian:"admin"
